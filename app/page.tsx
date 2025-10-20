@@ -107,21 +107,6 @@ export default function Home() {
                 })}
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                  <div className="text-slate-400 text-sm">Uptime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">50M+</div>
-                  <div className="text-slate-400 text-sm">Searches</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-slate-400 text-sm">Support</div>
-                </div>
-              </div>
             </div>
           </div>
         </main>
