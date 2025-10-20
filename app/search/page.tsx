@@ -84,11 +84,22 @@ function SearchPageContent() {
     try {
       const results = await searchProducts(query);
       
-      // Filter Google organic results flagged at source
-      const googleDealsResults = results.filter(result => (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true);
+      // Filter results based on price availability
+      // Products without prices go to Top Deals (Google organic results)
+      const googleDealsResults = results.filter(result => {
+        const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+        const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
+        // Include Google organic results OR products without prices
+        return isGoogleOrganic || !hasPrice;
+      });
       
-      // Filter other platform results (from our APIs)
-      const otherResults = results.filter(result => (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic !== true);
+      // Products with prices go to Search Results
+      const otherResults = results.filter(result => {
+        const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+        const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
+        // Include products with prices that are NOT Google organic
+        return hasPrice && !isGoogleOrganic;
+      });
       
       setGoogleDeals(googleDealsResults);
       setSearchResults(otherResults);
@@ -119,11 +130,22 @@ function SearchPageContent() {
 
     const results = await searchProducts(message);
     
-    // Filter Google organic results flagged at source
-    const googleDealsResults = results.filter(result => (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true);
+    // Filter results based on price availability
+    // Products without prices go to Top Deals (Google organic results)
+    const googleDealsResults = results.filter(result => {
+      const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+      const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
+      // Include Google organic results OR products without prices
+      return isGoogleOrganic || !hasPrice;
+    });
     
-    // Filter other platform results (from our APIs)
-    const otherResults = results.filter(result => (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic !== true);
+    // Products with prices go to Search Results
+    const otherResults = results.filter(result => {
+      const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+      const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
+      // Include products with prices that are NOT Google organic
+      return hasPrice && !isGoogleOrganic;
+    });
     
     return {
       googleDeals: googleDealsResults,
