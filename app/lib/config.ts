@@ -1,37 +1,56 @@
-// SearchAPI Configuration
-export const SEARCHAPI_CONFIG = {
-  // Get your API key from https://www.searchapi.io/
-  API_KEY: 'af2nEwUds11PVv7Skq7Q8oaE', // Production API key
-  BASE_URL: 'https://www.searchapi.io/api/v1/search',
-  
-  // Google Search Parameters for India
-  GOOGLE_PARAMS: {
-    engine: 'google',
-    location: 'India',
-    gl: 'in', // Country code for India
-    hl: 'en', // Language
-    device: 'desktop'
+// Production-ready configuration
+export const config = {
+  supabase: {
+    url: process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://mqnksqstdapmresitgbt.supabase.co',
+    anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1xbmtzcXN0ZGFwbXJlc2l0Z2J0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4ODkzOTAsImV4cCI6MjA3NjQ2NTM5MH0.6TyIpKPEuPekCtxqGC-XXSCEXWJgdb37kLRk-Ud0G5Q',
   },
-  
-  // Google Shopping Parameters
-  SHOPPING_PARAMS: {
-    engine: 'google_shopping',
-    location: 'India',
-    gl: 'in',
-    hl: 'en'
+  auth: {
+    // Session timeout in seconds (24 hours)
+    sessionTimeout: 24 * 60 * 60,
+    // Auto-refresh session before expiry (5 minutes)
+    refreshThreshold: 5 * 60,
+  },
+  app: {
+    name: 'Bilmo Shopping Agent',
+    version: '1.0.0',
+    environment: process.env.NODE_ENV || 'development',
   }
-};
-
-// Helper function to check if API key is configured
-export function isSearchAPIConfigured(): boolean {
-  return SEARCHAPI_CONFIG.API_KEY !== 'YOUR_SEARCHAPI_KEY' && SEARCHAPI_CONFIG.API_KEY.length > 0;
 }
 
-// Helper function to get headers for SearchAPI requests
-export function getSearchAPIHeaders() {
+// Search API Configuration
+export const SEARCHAPI_CONFIG = {
+  API_KEY: process.env.NEXT_PUBLIC_SEARCHAPI_KEY || 'af2nEwUds11PVv7Skq7Q8oaE',
+  BASE_URL: 'https://www.searchapi.io/api/v1/search',
+  timeout: 10000,
+  maxResults: 15,
+}
+
+// Check if Search API is configured
+export const isSearchAPIConfigured = () => {
+  return !!(SEARCHAPI_CONFIG.API_KEY && SEARCHAPI_CONFIG.API_KEY !== '')
+}
+
+// Get Search API headers
+export const getSearchAPIHeaders = () => {
   return {
-    'Accept': 'application/json',
     'Content-Type': 'application/json',
+    'User-Agent': 'Bilmo-Shopping-Agent/1.0.0',
     'Authorization': `Bearer ${SEARCHAPI_CONFIG.API_KEY}`,
-  };
+  }
+}
+
+// Validate configuration
+export const validateConfig = () => {
+  const required = ['supabase.url', 'supabase.anonKey']
+  const missing = required.filter(key => {
+    const value = key.split('.').reduce((obj, k) => obj?.[k], config)
+    return !value
+  })
+  
+  if (missing.length > 0) {
+    console.error('Missing required configuration:', missing)
+    return false
+  }
+  
+  return true
 }

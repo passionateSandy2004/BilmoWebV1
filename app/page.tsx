@@ -4,10 +4,12 @@ import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
+import { useAuth } from './contexts/AuthContext';
 import { Plane, Hotel, ShoppingBag, TrendingUp, Star, Shield } from 'lucide-react';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
+  const { user } = useAuth();
 
   const handleSearch = (query: string) => {
     if (!query.trim()) return;
@@ -38,7 +40,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
-        <Header title="Bilmo Shopping Agent" showAuthButtons={false} />
+        <Header title="Bilmo Shopping Agent" showAuthButtons={true} />
 
         {/* Main Content Area */}
         <main className="flex-1 overflow-y-auto">
@@ -70,6 +72,37 @@ export default function Home() {
                 isLoading={isLoading}
                 className="mb-12"
               />
+
+              {/* Authentication CTA - Only show when not logged in */}
+              {!user && (
+                <div className="mb-12 text-center">
+                  <p className="text-slate-300 text-lg mb-4">
+                    Sign in to access advanced search features and save your preferences
+                  </p>
+                  <div className="flex justify-center space-x-4">
+                    <button 
+                      onClick={() => {
+                        // This will be handled by the Header component
+                        const signInBtn = document.querySelector('[data-signin]') as HTMLButtonElement;
+                        if (signInBtn) signInBtn.click();
+                      }}
+                      className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    >
+                      Sign In
+                    </button>
+                    <button 
+                      onClick={() => {
+                        // This will be handled by the Header component
+                        const signUpBtn = document.querySelector('[data-signup]') as HTMLButtonElement;
+                        if (signUpBtn) signUpBtn.click();
+                      }}
+                      className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              )}
 
 
               {/* Quick Actions Grid */}
