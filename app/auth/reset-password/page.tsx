@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { Lock, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react'
 import { useAuth } from '@/app/contexts/AuthContext'
 
@@ -17,7 +17,7 @@ export default function ResetPasswordPage() {
   
   const { updatePassword, user } = useAuth()
   const router = useRouter()
-  const searchParams = useSearchParams()
+  // Removed useSearchParams to avoid CSR bailout during static generation
 
   useEffect(() => {
     // Check if user is authenticated
