@@ -1,7 +1,9 @@
 import { supabase } from './supabase'
-import { User, Session, AuthError } from '@supabase/supabase-js'
+import { Session, AuthError } from '@supabase/supabase-js'
 
-export interface AuthUser extends User {
+export interface AuthUser {
+  id: string
+  email?: string
   user_metadata?: {
     full_name?: string
     avatar_url?: string
