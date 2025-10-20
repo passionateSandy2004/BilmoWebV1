@@ -87,7 +87,11 @@ function SearchPageContent() {
       // Filter results based on price availability
       // Products without prices go to Top Deals (Google organic results)
       const googleDealsResults = results.filter(result => {
-        const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+        const hasPrice = result.price && 
+          result.price !== 'Price N/A' && 
+          result.price !== 'N/A' && 
+          result.price !== 'Price not available' &&
+          result.price !== 'Not available';
         const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
         // Include Google organic results OR products without prices
         return isGoogleOrganic || !hasPrice;
@@ -95,7 +99,11 @@ function SearchPageContent() {
       
       // Products with prices go to Search Results
       const otherResults = results.filter(result => {
-        const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+        const hasPrice = result.price && 
+          result.price !== 'Price N/A' && 
+          result.price !== 'N/A' && 
+          result.price !== 'Price not available' &&
+          result.price !== 'Not available';
         const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
         // Include products with prices that are NOT Google organic
         return hasPrice && !isGoogleOrganic;
@@ -133,7 +141,11 @@ function SearchPageContent() {
     // Filter results based on price availability
     // Products without prices go to Top Deals (Google organic results)
     const googleDealsResults = results.filter(result => {
-      const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+      const hasPrice = result.price && 
+        result.price !== 'Price N/A' && 
+        result.price !== 'N/A' && 
+        result.price !== 'Price not available' &&
+        result.price !== 'Not available';
       const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
       // Include Google organic results OR products without prices
       return isGoogleOrganic || !hasPrice;
@@ -141,7 +153,11 @@ function SearchPageContent() {
     
     // Products with prices go to Search Results
     const otherResults = results.filter(result => {
-      const hasPrice = result.price && result.price !== 'Price N/A' && result.price !== 'N/A';
+      const hasPrice = result.price && 
+        result.price !== 'Price N/A' && 
+        result.price !== 'N/A' && 
+        result.price !== 'Price not available' &&
+        result.price !== 'Not available';
       const isGoogleOrganic = (result as Product & { isGoogleOrganic?: boolean }).isGoogleOrganic === true;
       // Include products with prices that are NOT Google organic
       return hasPrice && !isGoogleOrganic;
