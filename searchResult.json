@@ -1,0 +1,397 @@
+{
+    "search_metadata": {
+      "id": "search_mpO7djkNqoswzGz5WvAPE9xq",
+      "status": "Success",
+      "created_at": "2025-10-20T03:26:48Z",
+      "request_time_taken": 1.15,
+      "parsing_time_taken": 0.1,
+      "total_time_taken": 1.25,
+      "request_url": "https://www.google.com/search?q=iphone+17+pro+max+best+deals+price+comparison+india&oq=iphone+17+pro+max+best+deals+price+comparison+india&gl=in&hl=en&uule=w+CAIQICIFSW5kaWE&ie=UTF-8",
+      "html_url": "https://www.searchapi.io/api/v1/searches/search_mpO7djkNqoswzGz5WvAPE9xq.html",
+      "json_url": "https://www.searchapi.io/api/v1/searches/search_mpO7djkNqoswzGz5WvAPE9xq"
+    },
+    "search_parameters": {
+      "engine": "google",
+      "q": "iphone 17 pro max best deals price comparison india",
+      "device": "desktop",
+      "location": "India",
+      "location_used": "India",
+      "google_domain": "google.com",
+      "hl": "en",
+      "gl": "in"
+    },
+    "search_information": {
+      "query_displayed": "iphone 17 pro max best deals price comparison india",
+      "total_results": 20500000,
+      "time_taken_displayed": 0.26,
+      "detected_location": "India",
+      "has_no_results_for": false
+    },
+    "answer_box": {
+      "type": "organic_result",
+      "title": "MRP - ₹149900.00 (Get benefits up to 26000*)",
+      "answer": "| Offer Details | \n| ------------- | \n| Starting MRP | ₹149900.00 | \n| (-) Instant Cashback | ₹4000* Instant Cashback on credit cards of ICICI Bank, IDFC First Bank & SBI Card and on debit cards of ICICI Bank | \n| Net Effective Price | ₹145900.00 | \n",
+      "link": "https://www.indiaistore.com/iphone-17-pro-max",
+      "answer_table": {
+        "headers": [
+          "Offer Details"
+        ],
+        "rows": [
+          [
+            "Starting MRP",
+            "₹149900.00"
+          ],
+          [
+            "(-) Instant Cashback",
+            "₹4000* Instant Cashback on credit cards of ICICI Bank, IDFC First Bank & SBI Card and on debit cards of ICICI Bank"
+          ],
+          [
+            "Net Effective Price",
+            "₹145900.00"
+          ]
+        ]
+      },
+      "organic_result": {
+        "title": "iPhone 17 Pro Max – Price, Colors, Features & Specifications",
+        "link": "https://www.indiaistore.com/iphone-17-pro-max",
+        "source": "IndiaiStore",
+        "domain": "www.indiaistore.com",
+        "displayed_link": "https://www.indiaistore.com › iphone-17-pro-max",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABD0lEQVR4Ae3XgcbCUBjG8WAfGcMu4bOL+AADhhn4gC6gS9gdNCoQhl3CwIguIDJAKI4uYKAAS0Lt6VXHAM6Z2t6khz/gbD9sY723HIA+NaEEdcUTk+eFvF5f9+YbtLONEgEgQrsbqQBbNFhRFBBCoMG2KsAFmsuyDIZhgI4hDENo7qIA6C8IAtCRe5ZlQXcvA0RRVAM8z+seUFUV0jRFHMcoy7J7gHqfDsjzHI7jwLZtJEnSPcD3/fohNE2ze4DrujWAYgd8AV/A57yGR+4P0Yr7UzxgBUjEjBUgES41pebUomFrBaDdAfihlmwAibCpHRtAIn6pPRtAIv6oExtAIv6pCo+duX54h9SBGvfeaTfO7yvwqo6zmgAAAABJRU5ErkJggg=="
+      }
+    },
+    "organic_results": [
+      {
+        "position": 1,
+        "title": "Buy iPhone 17 Pro",
+        "link": "https://www.apple.com/in/shop/buy-iphone/iphone-17-pro",
+        "source": "Apple",
+        "domain": "www.apple.com",
+        "displayed_link": "https://www.apple.com › iPhone › iPhone 17 Pro",
+        "snippet": "Get ₹3590.00–₹64000.00 off iPhone 17 Pro or iPhone 17 Pro Max when you trade in an iPhone 7 Plus or newer. Buy now with free shipping.",
+        "snippet_highlighted_words": [
+          "Get ₹3590.00–₹64000.00 off iPhone 17 Pro or iPhone 17 Pro Max"
+        ],
+        "rich_snippet": {
+          "extensions": [
+            "Free delivery"
+          ]
+        },
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4Aa1XQ3hkQRjc+ynX2OZtbfu+tm3b1nlt27a9O4qNS5xxbdd+cTKvXydT31fJoPuvmvf6/ejw86dBlX6CwwQXCq6t5cLaz/xV4+ld6F8r9NdgsCAjIwf5+UUoLCwBydf8jN+JNQbBddzjDQM+gocErRSyWm2QgWu4lntq9/q01UAfwYKCgmK43W6ognu4lzEE+6oamCboLC0tR3vBGIwlOF2vgZm5uQWoqamBXrhcLpw5cxZ79uxFKxCxrGBMxpYZ6Eu33KAXNDp+/AQEBgbzv8Y6Kxi7+e1ofuAKVS/7zp27KE7i6dNnem5HAbVaM3CYh0YF/PWRkdEUpxHoQe3BPNTcQJCgTc9pT0tLh8VigdPpBLFv3368evVKBC7A16/fkJmZKX06qCXo39jAej67Wnjx4iVGjBiJ0NBwBAeHYsCAgTh48BCuXLmCKVOmIioqBrwS4eGRGDduPMxmMzyBWtRsbMCglWSePXuOkJAwCuhmnz79YLVaPSUrGjDWGQhgCvWEyspKdOrURUk8JiYO799/0Exg1KQ2DQxjHveEO3fuKomTPBcyUJPaNLCQxcQTNm3arGzAYDBABmoK7UU0sE7rAC5dukxJPCgoRPy6DMhATWpLDWzbtl35Cty//0DBgOQW3LhxU9nAsGEj4HA4dN0CySHkwvy6bKfECRMmISsrS34IZY8hMXnyFAZV5rFjx6WPoa5E9PnzZ2XxpKQUlJaWaiUik1IqXrBgkZKB06fPwBOKiv4fwA3Ni5FdK3NVVFSgd+++usRnzJilXIzII7JynJOTAxaa7t17Yt68+bh37z6+fPmKCxcuYvToMejVqzdWrVrNMi0rx4cVGxIFKDQkCi2ZAhRaMklTavWqeF6epCltxuneasvLyurb8lmqg0lfLw4m/dozmh0RtBUV6R/NuJZ7avf6eGs4ZeIwMoVmZrYcTvkZv+MarlUZTlUZIDi8diRfX8uFtZ8FqMb7Bx+2VJbBTrlcAAAAAElFTkSuQmCC"
+      },
+      {
+        "position": 2,
+        "title": "iPhone 17 Pro Max | Best Deals & Prices",
+        "link": "https://iplanet.one/collections/iphone-17-pro?srsltid=AfmBOoparviOWHnPvM_bMFdB2nmIhwDt-8gr2ps1SrLTK9Wpt9Aiy8VV",
+        "source": "iPlanet",
+        "domain": "iplanet.one",
+        "displayed_link": "https://iplanet.one › collections › iphone-17-pro",
+        "snippet": "iPhone 17 Pro · ₹ 149,900 ; iPhone 17 · ₹ 82,900 ; iPhone Air · ₹ 115,890 ; iPhone 16e · ₹ 56,905 ; iPhone 16 Pro · ₹ 104,405.",
+        "snippet_highlighted_words": [
+          "iPhone 17 Pro · ₹ 149,900"
+        ],
+        "rich_snippet": {
+          "extensions": [
+            "Free delivery"
+          ]
+        },
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACKUlEQVR4Ab3WA8ycQRCA4Z9BbbtRFdS2raBuXNuIa9sOili1HdS2bR+3b5Nvikn37ya3102e497O3Ox8SPEw0oLniliFe/iGrup7r0MHb4XXMAIDg+/Skx28Mt7CIIQ4IqgSfJ8Kv0MtvBIG3xCCwWb8l5ED91XpTyK/SjJpIxeewOA5liKvz+ZLRRq0dEiAamiPQpCRoX6bUJO5z/ExV01ORyOMxmSMw2A0Rin1m2JojoGYgEkYhpqQkQ7n4HVwGBEYJYyH2ILRWIXbiMIon7ELkkiaS/C2+AITiChGc5j7CV1cgpfEM3ViMer5h2ggJq/lOzUvhjAMvqI3MrI6saySMquFjFBBhJ6r34dgcB3FJKYOXgbvLYsnQnrjCMpDj5/dORAGMU/B45Dg55DXdoaUPVkoGXsIrreqjor11wQ2Syd7SiAGg/06oC2BHdKAnhKIwGCRrfQ6gW2eE5D9X+2awMokbcFZFdx6FEz13oSAQc8gRmZWJ6FG+sceEpAqPENFWIdkd1HK5yMB1Qu30FFXQV8LpqgOjnvagjAMnqKExLTd5X7wWQW1Ff1drojr1dEAL1tw1PVWuzI+69Npgk0YRX056lyqMF33glDvhS653vsVsr5rFbLjnFpEFrXekKh5kvxNFNRnQ5cq1EdILRaT15okpOaH0cih9NazY3dLH9zAPIzB7OC9ga5Ad3vp3SvRDGcRwmlMRFE1twAm4xq+4Bxa/euffwf8LgJxbhag7AAAAABJRU5ErkJggg==",
+        "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAgYHBQEEA//EADYQAAIBAgMDCAgHAQAAAAAAAAABAgMEBQYRByExEiI1QVFykbITVWF0gZKT0iVDU3GiwdFC/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAMEAgH/xAAfEQEAAgIDAQEBAQAAAAAAAAAAAQIDMhETMSFRQRL/2gAMAwEAAhEDEQA/ANxAAAOFj2YFhtWNvb0XXuJcIpN7+xJb2zuMzLO9O5ubnFrazrKjd17edK3qOXJ57cXyeV/zyoqUdfabpETyxaf479HHswXEXK3wunUSejcJwen8yF3mLHrKn6S8wtUaeunLa1S/dpvT4lB2MZbx/CsfuLi5tK1jZug4VITa0qT1WktE+rR/Nu69Nax24t7XC7p3s4unOm4qm+Mm1pou07Fvvgmvz1V3na/X5Fv4P/RTzzeRmnVtaE49ai2mVZaqEVJ6tJasjIp66/if/dv1r2F4hQxOxpXds36OouD4xa3NP2pn1lV2ctvBK6b3RuppeES1Elo4mYVVnmOQAGXQAAAzbNCTxm5TWqb4M0lmaZjny8YuXppz5LwbX9DsG0k5vHI9HDgorQjyIJ6qK17dD9GRZUQgyEiUiEjri97NZN4ReJrRRvJaPt5kC3FP2Zybwq+Te6N7LT2cyBcCHJtKymsAAMNAAABmeYouOL3Kf6kn4ybNMM1zR01c94fg9knN5DkMhUkoxcpbkusmzl30pxrvnPTTdvKSIfeyDIWz1oQ48OskzoXnZnJvCr9N7ley0+SBcSp7N+hbn3yflgWwhybSrprAADDQAAAZrmjpq57xpRmmaOm7nvDsG0k5vIchkJaEpMhIrTovgQlwJshIAv8As26FuffJ+WBbCpbNuhbn3yflgW0gvtKymsAAMtAAADMyzQ/xu67xprMxzS/xu6747BtJObxyGyDPWyLK04yEmetkZMA0DZr0Jc++T8sC2lS2a9B3D7buenyxLaQX2lZTWAAGWgAAAqObct3F5Xd7h0Y1KsklUouSi5e1N7vEtwNVtNZ5hy1YtHEsqeW8f9U1PrUvuIvLWYPVNT61L7jVgM7rF9VWTvLOYPVNT61L7iVHKWYK9WNN2MbeL41ataDjH4RbbNWPQ7rDqq5+BYVSwbC6NjRk58jVym+M5N6t+J0ABM/TY+AAAP/Z"
+      },
+      {
+        "position": 3,
+        "title": "Apple iPhone 17 Price in India (2025)",
+        "link": "https://www.reliancedigital.in/c/resource-center/bg/iphone-17-price-india",
+        "source": "Reliance Digital",
+        "domain": "www.reliancedigital.in",
+        "displayed_link": "https://www.reliancedigital.in › resource-center › iphon...",
+        "snippet": "The iPhone 17 Pro Max Price in India starts at around ₹1,49,900 and goes up depending on the storage configuration. Reliance Digital has special ...",
+        "snippet_highlighted_words": [
+          "iPhone 17 Pro Max Price in India starts at around ₹1,49,900"
+        ],
+        "date": "5 days ago",
+        "favicon": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzg3Nzc3Nzc3NzcwN//AABEIABwAHAMBEQACEQEDEQH/xAAZAAEAAgMAAAAAAAAAAAAAAAAABAUBAgP/xAAkEAACAQMEAQUBAAAAAAAAAAABAgMAETEEBSFhEhQyUVLRBv/EABsBAAIDAAMAAAAAAAAAAAAAAAAEAQMFAgYH/8QAKBEAAQQBBAEDBAMAAAAAAAAAAQACAxEhBDFBYQUSUYEiMnHwBhMU/9oADAMBAAIRAxEAPwChrHXpSEqCASAWwCc1yDHOBIGyrfLGwhrnAE7Z3/CVxViVCFL27TpNOGnSRtPGbyCPLD6js0zptO6ayBgftfKy/J+RZow1tgOeaF8e7j0FaSab+ekVm9HusaMwIa6Ex25st7kDHJ+KuYXRsLmtcGlJy1PO2OSWN0jdhZ3sHis42C1l0G0OXTTDclkJ8VeQxsitnmwBt+1H+Q/2FhBFGrwQDVqR5gGBszHscCPUBkOIusA99cKiBuAaRtb9UpGn1cmnjKIqG7eQLXuDimYdS+JvpaB7rN1nioNZKJJCcCqGxF2LxwV3k3BXiCiMknyDA+2xvwOb8cVc/WAxNaBnN+1H5vHCR0/hXR6uSVzh6T6C0j7rbWTYrPNXfSwNzlUsViiHkwY5676ob5CRoIAGTfPXfSJP43pZHNc57vpFDI7rji1CYgsSFCgngDApA7rsLRQAu0xQhKFCUIShFr//2Q==",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2pqr1ojHoC9MSQEG9_3XsZQY_AuRcLsLpTIEiYvxLD9tlSFfQi0iw&usqp=CAE&s"
+      },
+      {
+        "position": 4,
+        "title": "Apple iPhone 17 Pro Max - 91Mobiles",
+        "link": "https://www.91mobiles.com/apple-iphone-17-pro-max-price-in-india",
+        "source": "91Mobiles",
+        "domain": "www.91mobiles.com",
+        "displayed_link": "https://www.91mobiles.com › Apple Mobile Phones",
+        "snippet": "Prices in India. 12 GB + 256 GB. Amazon. ₹149,900 Out Of Stock. 12 GB + 512 GB. Flipkart. ₹169,900 Go To Store. 12 GB + 1 TB. Amazon. ₹189,900 Go To Store. 12 ...",
+        "snippet_highlighted_words": [
+          "12 GB + 256 GB. Amazon. ₹149,900"
+        ],
+        "rich_snippet": {
+          "extensions": [
+            "₹1,49,900.00"
+          ]
+        },
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAclBMVEX/ZRT/jlf/upX/vJz+ilT/ik7/cCz/ciX/fTr/bB3/cCH/XAH/WQD/////UQD/QwD/bR368Or+ZRP4RQD8+vjlOwLlh2j/1sP+ro7pzcP+eTvdtqn4OgDjaznhm4X+x7L64dT/mXD8JgDZTAvHbEvPgV9osQeBAAAACnRSTlP0tRUt+NLS9PT0DKHZpQAAAT5JREFUKJF10FmCgjAMANCquJEm3ZV9U+9/xUkZGBmUfEDbl6Zpxf54PX+N6/EgdqRT/TXoKC6QboQ9i2QbLzNaKSXoeRnicEZNus+yBMZES2lRpHpGS7336P1dSx5D5r25wYQWWmTyiGhlkcW/uckJORXN61HfETuXsRj822mLDvEVLBUGfZ10ZZ0vMOHFB1hQXL1xdaju77LQc5nAV1FcMg9EKqKzwEiKd2JQIIcROWlESVdxUWT5zHYYBj5zgTAiqJ67Ny03i1iukVRmmH2eo28C/EfWoszz5sFYuxVKnjvnBn4LPnKNkoiqim+EzwrkJ8qi9bEdkOuGqDXjs5ex6AfyRbnZ56+RMkuUWVk2/KYQjTVpmprmq4ALoXI0GU/HydxQXJlomvCH8RxxAe8MsmKnaCPUSexPYiNOhx9q0Sw9gYbtJgAAAABJRU5ErkJggg==",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEbYjlwNUKbFnaWJssSB-Xx6P_kYz7AglhQ--G_aULeJUSPpZ8rSwk&usqp=CAE&s"
+      },
+      {
+        "position": 5,
+        "title": "List of 7 Countries Where iPhone 17 is More Affordable ...",
+        "link": "https://www.jagranjosh.com/general-knowledge/list-of-countries-where-iphone-17-is-cheaper-than-india-1820002783-1",
+        "source": "Jagran Josh",
+        "domain": "www.jagranjosh.com",
+        "displayed_link": "https://www.jagranjosh.com › ... › Current GK",
+        "snippet": "That is why the current pricing of the iPhone 17 in India starts from 82,900. Whereas, in various other countries, there are lower taxes, strong ...",
+        "snippet_highlighted_words": [
+          "iPhone 17",
+          "India"
+        ],
+        "date": "23 Sept 2025",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACcUlEQVR4AeyVQ5QdURRF42QY2zbGwTjz2LZt27bNtm3btu2uz9p5qzpWu0f/rPWsfW7htTLoZwHjgNPA42ZKp4Fx/zs8jOZX2F8hFLqW0+m/ATyi5fTobwCPaTk9NgAYAJoEQKPRUFVVRWVlJeXl5d/rer2+ZQBiY2IwMzHFxNiYzx8/YWZqirGRkQLzTWVlZUiS1AAA4UKXmIJabKp6+Ry1tS36rBx+lp+vLx7u7hQXFVFWWkq5OEyU3yOg0+k4cugw1lZW9QOQqyWkp48pXzGdirVDqdg8iIpVw0WaidrcHHQ1B9y8foPDBw6iVqvx8fZGJKWelZmFva0dqamprF21ihNHj4kxH+UR1Q4gg/RMHL58BNKlfmje9kL7uSfSlYFUrB5IyeQpIhr2AFy7cpVDBw4o4V+/Zi0b1q7l7es37Nqxgx3bthEdFcW6NWvYuX078+fMxdTEpHYAXVKqcD6D6gv90Fl3Q47rhJzeXjjvQum0oRSPGUT11QMAXL96lQP79rFvz14e3LvHwwcP2L1jJ48ePGTFsmV4eXoqAB/evWPPrl3cv3uvdgARYuF0KOpnvZFjO0FFq5pU3ArpZncqdw1AejYbdJIAuMah/QeUjbdu2sy2LVu4dfMmAf7+LJo/n1MnTrB21WrevX3L7p07xby71B6BuDg0bq/Qxz+DivuguVOTtHfQ5zxCG/ASbYQpsrqKc2fOKu9ASUkJz58+E+kp+fn5WAgT9+7cITk5WXkBoyKjcHJwJDgoqBaAenz/r168UNy5ODm3/I9IlmXy8/IoKixS6oa7wADwZcPGAfRvlA58s3zgOyYD3zUbBQBWKWi/bG0JpgAAAABJRU5ErkJggg=="
+      },
+      {
+        "position": 6,
+        "title": "Apple iPhone 17 – Price, Colours, Features & Specs",
+        "link": "https://www.indiaistore.com/iphone-17",
+        "source": "IndiaiStore",
+        "domain": "www.indiaistore.com",
+        "displayed_link": "https://www.indiaistore.com › iphone-17",
+        "snippet": "MRP - ₹82900.00 (Get benefits up to 26000*) · MRP. ₹82900.00 · (-) Instant Store Discount. ₹20000 · (-) Instant Cashback. ₹6000 · Net Effective Price. ₹76900 · (-) ...",
+        "snippet_highlighted_words": [
+          "MRP - ₹82900.00"
+        ],
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABD0lEQVR4Ae3XgcbCUBjG8WAfGcMu4bOL+AADhhn4gC6gS9gdNCoQhl3CwIguIDJAKI4uYKAAS0Lt6VXHAM6Z2t6khz/gbD9sY723HIA+NaEEdcUTk+eFvF5f9+YbtLONEgEgQrsbqQBbNFhRFBBCoMG2KsAFmsuyDIZhgI4hDENo7qIA6C8IAtCRe5ZlQXcvA0RRVAM8z+seUFUV0jRFHMcoy7J7gHqfDsjzHI7jwLZtJEnSPcD3/fohNE2ze4DrujWAYgd8AV/A57yGR+4P0Yr7UzxgBUjEjBUgES41pebUomFrBaDdAfihlmwAibCpHRtAIn6pPRtAIv6oExtAIv6pCo+duX54h9SBGvfeaTfO7yvwqo6zmgAAAABJRU5ErkJggg==",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirkHYpLjdcUBvGGZ1i9huO5KoIuITWMSO-U5Q_eQGWfUC77oUUCKS&usqp=CAE&s"
+      },
+      {
+        "position": 7,
+        "title": "iPhone 17 Pro Max Phone Price, Specs, Comparison and ...",
+        "link": "https://www.gadgets360.com/iphone-17-pro-max-price-in-india-134374",
+        "source": "Gadgets 360",
+        "domain": "www.gadgets360.com",
+        "displayed_link": "https://www.gadgets360.com › ... › Apple Phones",
+        "snippet": "iPhone 17 Pro Max price in India starts from ₹ 149,900. The lowest price of iPhone 17 Pro Max is ₹ 149,900 at Flipkart on 20th October 2025.",
+        "snippet_highlighted_words": [
+          "iPhone 17 Pro Max price in India starts from ₹ 149,900"
+        ],
+        "date": "6 days ago",
+        "rich_snippet": {
+          "extensions": [
+            "₹1,49,900.00 to ₹1,69,900.00"
+          ]
+        },
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAe1BMVEVHcEz9AAD4SEj9AAD7AwP9AAD9AAD8AwP9AAD9AAD9AAD/vr7+vLz9AAD/4eH9AAD9AAD/4OD/6ur/3Nz/1dX9AAD9AAD////+VFT+nZ3/z8/+kZH/vr7+bW3+oqL+qKj+YmL//Pz/6+v9LS3+fHz/9/f9Pz/9CQn+s7MbtUWlAAAAFnRSTlMACRzxHpt9E9ZfMzHdr/krRcqoeISwzzu+pAAAAQhJREFUKJGNUtlygzAMNJML56Bpm66MwcaEAP3/L6zkZAZoCJN9sUcr7VqylHoTu/VunlhvUwjS7VNCssGAzZTbrzDG6mPEnfEf+8HuiQPYONEJk+kMmSp1wo9S2uS5iZFb5Ts5g/dGKw2t1JEYJcesXG7Ar5zH6Higq3FEBgVlTUGEjurgqD4IeakLKSqQcQJCQC4ylr6F5Pb7rqYG1IayZNWScqCiLyFPwJW4sKeIKqpw+eeDrKx4EleweT8m41RL9qEaIuLGshdJ9GQ53gAtmfGDpBXTckZFlltpJ62oTN5hoyTDTYagtPPePcaXN8P47ngx+MUve+Ozl9dkecGWV/OOl0s9iz+C8SwrpAylkAAAAABJRU5ErkJggg==",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwSgUjc5FX2S22oFzVTKtzPI_R4OUn0KAp3p6PjTdqDfIflDqcIuQo&usqp=CAE&s"
+      },
+      {
+        "position": 8,
+        "title": "Buy iPhone 17 Pro Max 256GB Silver",
+        "link": "https://www.apple.com/in/shop/buy-iphone/iphone-17-pro/6.9%22-display-256gb-silver",
+        "source": "Apple",
+        "domain": "www.apple.com",
+        "displayed_link": "https://www.apple.com › iPhone › iPhone 17 Pro",
+        "snippet": "From ₹12075.00 · MRP ₹149900.00 ; From ₹13742.00 · MRP ₹169900.00 ; From ₹15408.00 · MRP ₹189900.00 ; From ₹18742.00 · MRP ₹229900.00 ...",
+        "snippet_highlighted_words": [
+          "From ₹12075.00 · MRP ₹149900.00"
+        ],
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4Aa1XQ3hkQRjc+ynX2OZtbfu+tm3b1nlt27a9O4qNS5xxbdd+cTKvXydT31fJoPuvmvf6/ejw86dBlX6CwwQXCq6t5cLaz/xV4+ld6F8r9NdgsCAjIwf5+UUoLCwBydf8jN+JNQbBddzjDQM+gocErRSyWm2QgWu4lntq9/q01UAfwYKCgmK43W6ognu4lzEE+6oamCboLC0tR3vBGIwlOF2vgZm5uQWoqamBXrhcLpw5cxZ79uxFKxCxrGBMxpYZ6Eu33KAXNDp+/AQEBgbzv8Y6Kxi7+e1ofuAKVS/7zp27KE7i6dNnem5HAbVaM3CYh0YF/PWRkdEUpxHoQe3BPNTcQJCgTc9pT0tLh8VigdPpBLFv3368evVKBC7A16/fkJmZKX06qCXo39jAej67Wnjx4iVGjBiJ0NBwBAeHYsCAgTh48BCuXLmCKVOmIioqBrwS4eGRGDduPMxmMzyBWtRsbMCglWSePXuOkJAwCuhmnz79YLVaPSUrGjDWGQhgCvWEyspKdOrURUk8JiYO799/0Exg1KQ2DQxjHveEO3fuKomTPBcyUJPaNLCQxcQTNm3arGzAYDBABmoK7UU0sE7rAC5dukxJPCgoRPy6DMhATWpLDWzbtl35Cty//0DBgOQW3LhxU9nAsGEj4HA4dN0CySHkwvy6bKfECRMmISsrS34IZY8hMXnyFAZV5rFjx6WPoa5E9PnzZ2XxpKQUlJaWaiUik1IqXrBgkZKB06fPwBOKiv4fwA3Ni5FdK3NVVFSgd+++usRnzJilXIzII7JynJOTAxaa7t17Yt68+bh37z6+fPmKCxcuYvToMejVqzdWrVrNMi0rx4cVGxIFKDQkCi2ZAhRaMklTavWqeF6epCltxuneasvLyurb8lmqg0lfLw4m/dozmh0RtBUV6R/NuJZ7avf6eGs4ZeIwMoVmZrYcTvkZv+MarlUZTlUZIDi8diRfX8uFtZ8FqMb7Bx+2VJbBTrlcAAAAAElFTkSuQmCC"
+      }
+    ],
+    "related_questions": [
+      {
+        "question": "How much will an iPhone 17 Pro Max cost?",
+        "answer": "iPhone 17 Pro, from $1,099 If you're rolling in cash, the iPhone 17 Pro Max with 2TB of storage will happily take more of your money. It's priced at $1,999.19 Sept 2025",
+        "answer_highlight": "from $1,099",
+        "date": "19 Sept 2025",
+        "source": {
+          "title": "New iPhone 17 or Air on Your Radar? Get Ready for These Prices Today",
+          "link": "https://www.cnet.com/tech/mobile/new-iphone-17-or-air-on-your-radar-get-ready-for-these-prices-today/#:~:text=iPhone%2017%20Pro%2C%20from%20%241%2C099&text=If%20you're%20rolling%20in,It's%20priced%20at%20%241%2C999.",
+          "source": "CNET",
+          "domain": "www.cnet.com",
+          "displayed_link": "https://www.cnet.com › tech › mobile › new-iphone-17-...",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAJFBMVEXR/XnJ/n/o+2nX/XXpAA7g/nDb+3HmQyrnHB3ieT7kaDfa2mZ6KGMEAAAAa0lEQVQYlV3OSxLAIAgDUJSA1d7/viVgP9Ms38SICNOk3RH9iWhKexuuqhMYYwDYsICTpVngigM19AHNqRXbYrYhyNkzswDntpyEvoG0EjrBEsCrAvhtTPnM7R55DrshdjIaDwvK3L5Q6H4BcjcDNJV2IgkAAAAASUVORK5CYII="
+        }
+      },
+      {
+        "question": "Will the iPhone 17 price increase in India?",
+        "answer": "iPhone 17 price in India Apple has increased the prices of its standard iPhone. The all new iPhone 17 starts at Rs 82,900 for the 256GB base model. Apple has dropped the 128GB variant entirely, meaning storage now begins at 256GB.10 Sept 2025",
+        "answer_highlight": "Apple has increased the prices of its standard iPhone",
+        "date": "10 Sept 2025",
+        "source": {
+          "title": "iPhone 17 sees price increase and iPhone 16 gets a price cut: All new ...",
+          "link": "https://www.indiatoday.in/technology/news/story/iphone-17-sees-price-increase-and-iphone-16-gets-a-price-cut-all-new-iphone-prices-in-india-2784802-2025-09-10#:~:text=iPhone%2017%20price%20in%20India,storage%20now%20begins%20at%20256GB.",
+          "source": "India Today",
+          "domain": "www.indiatoday.in",
+          "displayed_link": "https://www.indiatoday.in › technology › news › story",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAQlBMVEVHcEzPHiXPHyTPHiXPHiTOHiPPHiTPHiXPHyXMAAXOEBjvuLrli47PHSPea27WQ0f75OX+9fb////TKS/tsbPom51/h80KAAAADnRSTlMAJJHW9COd/8f/////ITSO7JoAAAB3SURBVHgBZY+FAYAwDARTferK/qPizlXjCa0wLqQUXNGBxoHe5QHGHppht1vn7e2jsCks7KYMxBdFTMuOPi0qTgIw2ZlScqkNECRXRTelm1ajhbwUo8GuEG+FIP5WcAqXYssRaKtrt2YNwPfWL4b/cDtqHz/QwgwT3QfQLNYdRgAAAABJRU5ErkJggg=="
+        }
+      },
+      {
+        "question": "In which country is the iPhone Pro Max the cheapest?",
+        "answer": "United States: The US remains one of the cheapest markets for iPhones. The iPhone 17 (256GB) costs around $799 (approximately Rs 66,800), while the iPhone 17 Air starts at $999 (around Rs 83,400). Both the Pro and Pro Max models are also priced lower compared to India.23 Sept 2025",
+        "answer_highlight": "United States",
+        "date": "23 Sept 2025",
+        "source": {
+          "title": "List of countries where prices of iPhone 17, iPhone Air, iPhone 17 ...",
+          "link": "https://www.moneycontrol.com/technology/list-of-countries-where-prices-of-iphone-17-iphone-air-iphone-17-pro-and-iphone-17-pro-max-are-cheaper-compared-to-india-article-13568934.html#:~:text=United%20States%3A%20The%20US%20remains,priced%20lower%20compared%20to%20India.",
+          "source": "Moneycontrol",
+          "domain": "www.moneycontrol.com",
+          "displayed_link": "https://www.moneycontrol.com › technology › list-of-co...",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABVElEQVR4AWL48+cvI4BTakiMIACC85vYPMe2bdu2bdu2bdu2jQfUIjYObSOmcsSd1zr3hM4wA78BHquck+iKYU9KLBFXPeZONfwDoshJiI+Vfw/cljlnxEdDOlgt4sBslkDlP9rf6p4T0BpkQC5KFwY5IjApECADP5VXSVCDeLA5+L1dIORnD9kIw68TkAN/BPVkpZ8TTOz0YO5gBNvny+hZrcXh9Rbiu1x/n+D8/ghhLVYY2epA01wBcgZDMbnb97cEDuXyaF8qR/5wFOI6XTC9N/D7BHuX67Avk0MjuXo2uXp0uwO5m/ZfJ/j/EjVSFCAVZgIhf1uIBlpBNlIfmqlyMM4XpAYb5wmST2rxIcHLg1Ah4wMwGKeAwzoKTKZJH2wEt1XO2b9f2Sr3gggp7ietiVwDOpYfaWH4/ecPU9fKY60mOfPfEavROHv++7Zlh9tAegG4y08IgYHbTgAAAABJRU5ErkJggg=="
+        }
+      },
+      {
+        "is_ai_overview": true,
+        "question": "What is the GST rate of iPhone 17 Pro Max?",
+        "text_blocks": [
+          {
+            "type": "paragraph",
+            "answer": "The Goods and Services Tax (GST) rate on the iPhone 17 Pro Max is 18%. For imported phones, this is applied to the total cost, which includes the base price plus customs duty. Recent GST reforms in India have not changed the rate for smartphones, which continue to attract an 18% rate, although other consumer goods may be affected by changes in the GST slabs.",
+            "answer_highlight": "18%",
+            "reference_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "type": "unordered_list",
+            "items": [
+              {
+                "type": "paragraph",
+                "answer": "Standard GST: The standard GST rate of 18% is applied to the final transaction price of the smartphone.",
+                "reference_indexes": [
+                  0,
+                  1,
+                  3
+                ]
+              },
+              {
+                "type": "paragraph",
+                "answer": "GST on imported phones: For imported iPhones, the 18% GST is calculated on the sum of the product's value and any applicable customs duty.",
+                "reference_indexes": [
+                  3,
+                  4
+                ]
+              },
+              {
+                "type": "paragraph",
+                "answer": "No change in GST for smartphones: Recent GST reforms effective from September 22, 2025, simplified the structure but did not alter the 18% tax rate for smartphones, meaning the price burden remains the same for these devices.",
+                "reference_indexes": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ],
+        "markdown": "The Goods and Services Tax (GST) rate on the iPhone 17 Pro Max is 18%. For imported phones, this is applied to the total cost, which includes the base price plus customs duty. Recent GST reforms in India have not changed the rate for smartphones, which continue to attract an 18% rate, although other consumer goods may be affected by changes in the GST slabs. [0](https://www.businesstoday.in/personal-finance/tax/story/gst-charges-on-iphone-17-how-much-consumers-will-pay-on-apples-latest-iphone-series-check-deatils-493789-2025-09-12#:~:text=Many%20hoped%20that%20this%20move,and%20retail%20price%E2%80%94remains%20unchanged.) [1](https://www.dnaindia.com/business/report-apple-awe-dropping-event-2025-will-new-gst-rates-make-iphone-17-series-cheaper-in-india-which-other-iphones-may-get-price-cut-iphone-17-pro-max-air-launch-news-updates-3179364#:~:text=Will%20new%20GST%20rates%20lower,percent%20GST%20rate%20as%20before.) [2](https://www.livemint.com/technology/tech-news/gst-2-0-takes-effect-will-apple-samsung-xiaomi-mobiles-above-rs-50-000-become-cheaper-11758520362702.html#:~:text=The%20Indian%20government%20has%20reformed,%2C%20smartphones%20remain%20at%2018%25.&text=2025.(Apple)-,In%20a%20major%20fiscal%20move%2C%20the%20Indian%20government%20has%20implemented,on%20the%20category%20of%20goods.) [3](https://cleartax.in/s/gst-on-iphone#:~:text=The%20customs%20duty%20is%20approximately,GST%20refund%20on%20mobile%20phones?) [4](https://www.bajajfinserv.in/gst-on-iphone#:~:text=Customs%20duty%20+%20GST:%20Total%20tax,Total%20tax:%20Customs%20Duty%20+%20GST)\n\n- Standard GST: The standard GST rate of 18% is applied to the final transaction price of the smartphone. [0](https://www.businesstoday.in/personal-finance/tax/story/gst-charges-on-iphone-17-how-much-consumers-will-pay-on-apples-latest-iphone-series-check-deatils-493789-2025-09-12#:~:text=Many%20hoped%20that%20this%20move,and%20retail%20price%E2%80%94remains%20unchanged.) [1](https://www.dnaindia.com/business/report-apple-awe-dropping-event-2025-will-new-gst-rates-make-iphone-17-series-cheaper-in-india-which-other-iphones-may-get-price-cut-iphone-17-pro-max-air-launch-news-updates-3179364#:~:text=Will%20new%20GST%20rates%20lower,percent%20GST%20rate%20as%20before.) [3](https://cleartax.in/s/gst-on-iphone#:~:text=The%20customs%20duty%20is%20approximately,GST%20refund%20on%20mobile%20phones?)\n- GST on imported phones: For imported iPhones, the 18% GST is calculated on the sum of the product's value and any applicable customs duty. [3](https://cleartax.in/s/gst-on-iphone#:~:text=The%20customs%20duty%20is%20approximately,GST%20refund%20on%20mobile%20phones?) [4](https://www.bajajfinserv.in/gst-on-iphone#:~:text=Customs%20duty%20+%20GST:%20Total%20tax,Total%20tax:%20Customs%20Duty%20+%20GST)\n- No change in GST for smartphones: Recent GST reforms effective from September 22, 2025, simplified the structure but did not alter the 18% tax rate for smartphones, meaning the price burden remains the same for these devices. [0](https://www.businesstoday.in/personal-finance/tax/story/gst-charges-on-iphone-17-how-much-consumers-will-pay-on-apples-latest-iphone-series-check-deatils-493789-2025-09-12#:~:text=Many%20hoped%20that%20this%20move,and%20retail%20price%E2%80%94remains%20unchanged.) [1](https://www.dnaindia.com/business/report-apple-awe-dropping-event-2025-will-new-gst-rates-make-iphone-17-series-cheaper-in-india-which-other-iphones-may-get-price-cut-iphone-17-pro-max-air-launch-news-updates-3179364#:~:text=Will%20new%20GST%20rates%20lower,percent%20GST%20rate%20as%20before.) [2](https://www.livemint.com/technology/tech-news/gst-2-0-takes-effect-will-apple-samsung-xiaomi-mobiles-above-rs-50-000-become-cheaper-11758520362702.html#:~:text=The%20Indian%20government%20has%20reformed,%2C%20smartphones%20remain%20at%2018%25.&text=2025.(Apple)-,In%20a%20major%20fiscal%20move%2C%20the%20Indian%20government%20has%20implemented,on%20the%20category%20of%20goods.)\n\n[[0] - GST charges on iPhone 17: How much consumers will pay on ...](https://www.businesstoday.in/personal-finance/tax/story/gst-charges-on-iphone-17-how-much-consumers-will-pay-on-apples-latest-iphone-series-check-deatils-493789-2025-09-12#:~:text=Many%20hoped%20that%20this%20move,and%20retail%20price%E2%80%94remains%20unchanged.)\n[[1] - Apple Event 2025: Will new GST rates make iPhone 17 series ...](https://www.dnaindia.com/business/report-apple-awe-dropping-event-2025-will-new-gst-rates-make-iphone-17-series-cheaper-in-india-which-other-iphones-may-get-price-cut-iphone-17-pro-max-air-launch-news-updates-3179364#:~:text=Will%20new%20GST%20rates%20lower,percent%20GST%20rate%20as%20before.)\n[[2] - GST 2.0 takes effect: Will Apple, Samsung, Xiaomi mobiles above ₹ ...](https://www.livemint.com/technology/tech-news/gst-2-0-takes-effect-will-apple-samsung-xiaomi-mobiles-above-rs-50-000-become-cheaper-11758520362702.html#:~:text=The%20Indian%20government%20has%20reformed,%2C%20smartphones%20remain%20at%2018%25.&text=2025.\\(Apple\\)-,In%20a%20major%20fiscal%20move%2C%20the%20Indian%20government%20has%20implemented,on%20the%20category%20of%20goods.)\n[[3] - GST on iPhone: Latest GST Rate and HSN Code - ClearTax](https://cleartax.in/s/gst-on-iphone#:~:text=The%20customs%20duty%20is%20approximately,GST%20refund%20on%20mobile%20phones?)\n[[4] - Latest GST Rate on iPhone and Accessories in India 2025](https://www.bajajfinserv.in/gst-on-iphone#:~:text=Customs%20duty%20+%20GST:%20Total%20tax,Total%20tax:%20Customs%20Duty%20+%20GST)",
+        "reference_links": [
+          {
+            "index": 0,
+            "title": "GST charges on iPhone 17: How much consumers will pay on ...",
+            "link": "https://www.businesstoday.in/personal-finance/tax/story/gst-charges-on-iphone-17-how-much-consumers-will-pay-on-apples-latest-iphone-series-check-deatils-493789-2025-09-12#:~:text=Many%20hoped%20that%20this%20move,and%20retail%20price%E2%80%94remains%20unchanged.",
+            "snippet": "Many hoped that this move would make Apple's new iPhones more affordable in India. However, consumers looking for a pr...",
+            "date": "12 Sept 2025 —",
+            "source": "Business Today"
+          },
+          {
+            "index": 1,
+            "title": "Apple Event 2025: Will new GST rates make iPhone 17 series ...",
+            "link": "https://www.dnaindia.com/business/report-apple-awe-dropping-event-2025-will-new-gst-rates-make-iphone-17-series-cheaper-in-india-which-other-iphones-may-get-price-cut-iphone-17-pro-max-air-launch-news-updates-3179364#:~:text=Will%20new%20GST%20rates%20lower,percent%20GST%20rate%20as%20before.",
+            "snippet": "Will new GST rates lower iPhone prices for Indian buyers? It should be noted that there will be no change in the prices...",
+            "date": "9 Sept 2025 —",
+            "source": "DNA India"
+          },
+          {
+            "index": 2,
+            "title": "GST 2.0 takes effect: Will Apple, Samsung, Xiaomi mobiles above ₹ ...",
+            "link": "https://www.livemint.com/technology/tech-news/gst-2-0-takes-effect-will-apple-samsung-xiaomi-mobiles-above-rs-50-000-become-cheaper-11758520362702.html#:~:text=The%20Indian%20government%20has%20reformed,%2C%20smartphones%20remain%20at%2018%25.&text=2025.(Apple)-,In%20a%20major%20fiscal%20move%2C%20the%20Indian%20government%20has%20implemented,on%20the%20category%20of%20goods.",
+            "snippet": "The Indian government has reformed the GST system, effective 22 September 2025, simplifying it to two slabs. While ele...",
+            "date": "22 Sept 2025 —",
+            "source": "Mint"
+          },
+          {
+            "index": 3,
+            "title": "GST on iPhone: Latest GST Rate and HSN Code - ClearTax",
+            "link": "https://cleartax.in/s/gst-on-iphone#:~:text=The%20customs%20duty%20is%20approximately,GST%20refund%20on%20mobile%20phones?",
+            "snippet": "The customs duty is approximately 22% (comprising basic customs duty, social welfare surcharge, etc.), and an 18% GST ...",
+            "date": "17 Sept 2025 —",
+            "source": "ClearTax"
+          },
+          {
+            "index": 4,
+            "title": "Latest GST Rate on iPhone and Accessories in India 2025",
+            "link": "https://www.bajajfinserv.in/gst-on-iphone#:~:text=Customs%20duty%20+%20GST:%20Total%20tax,Total%20tax:%20Customs%20Duty%20+%20GST",
+            "snippet": "Customs duty + GST: Total tax impact on imported phones Imported iPhones are subjected to both customs duty and GST. The customs d...",
+            "source": "Bajaj Finserv"
+          }
+        ]
+      }
+    ],
+    "inline_videos": [
+      {
+        "position": 1,
+        "title": "Global iPhone 17 Pro Max vs Indian iPhone 17 Pro Max ...",
+        "source": "YouTube",
+        "channel": "Tech At 6",
+        "length": "8:53",
+        "image": "data:image/jpeg;base64,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"
+      },
+      {
+        "position": 2,
+        "title": "iPhone 17 Pro & Pro Max: All Colors Compared!",
+        "source": "YouTube",
+        "channel": "Brandon Butch",
+        "length": "17:06",
+        "image": "data:image/jpeg;base64,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"
+      },
+      {
+        "position": 3,
+        "title": "iPhone 17 Pro Max vs 16 Pro Max – ₹60000 Difference ...",
+        "source": "YouTube",
+        "channel": "Tech Buffet",
+        "length": "27:40",
+        "image": "data:image/jpeg;base64,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"
+      }
+    ],
+    "related_searches": [
+      {
+        "query": "Iphone 17 pro max best deals price comparison india apple store",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=Iphone+17+pro+max+best+deals+price+comparison+india+apple+store&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgjEAE"
+      },
+      {
+        "query": "iPhone 17 Pro Max price in India",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=iPhone+17+Pro+Max+price+in+India&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgvEAE"
+      },
+      {
+        "query": "iPhone 17 Pro price in India",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=iPhone+17+Pro+price+in+India&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgtEAE"
+      },
+      {
+        "query": "Iphone 17 pro max best deals price comparison india 128gb",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=Iphone+17+pro+max+best+deals+price+comparison+india+128gb&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgrEAE"
+      },
+      {
+        "query": "Iphone 17 pro max best deals price comparison india 256gb",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=Iphone+17+pro+max+best+deals+price+comparison+india+256gb&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgoEAE"
+      },
+      {
+        "query": "iPhone 17 Pro Max 2TB price in India",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=iPhone+17+Pro+Max+2TB+price+in+India&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgmEAE"
+      },
+      {
+        "query": "iPhone 17 price in India",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=iPhone+17+price+in+India&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAglEAE"
+      },
+      {
+        "query": "iPhone 17 Pro Max 512GB price in India",
+        "link": "https://www.google.com/search?sca_esv=754db90ace67d20d&hl=en&gl=in&q=iPhone+17+Pro+Max+512GB+price+in+India&sa=X&ved=2ahUKEwjNtPm66rGQAxV8kmoFHdQsIzEQ1QJ6BAgkEAE"
+      }
+    ],
+    "pagination": {
+      "current": 1,
+      "next": "https://www.google.com/search?q=iphone+17+pro+max+best+deals+price+comparison+india&oq=iphone+17+pro+max+best+deals+price+comparison+india&gl=in&hl=en&start=10&uule=w+CAIQICIFSW5kaWE&ie=UTF-8"
+    }
+  }

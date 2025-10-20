@@ -1,103 +1,131 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import { Plane, Hotel, ShoppingBag, TrendingUp, Star, Shield } from 'lucide-react';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isLoading, setIsLoading] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  const handleSearch = (query: string) => {
+    if (!query.trim()) return;
+    
+    // Navigate to search page with the query
+    window.location.href = `/search?q=${encodeURIComponent(query)}`;
+  };
+
+
+  const quickActions = [
+    { icon: Plane, label: 'Flight Search', description: 'Find the best flight deals', color: 'from-blue-500 to-cyan-500' },
+    { icon: Hotel, label: 'Hotel Booking', description: 'Book premium accommodations', color: 'from-purple-500 to-pink-500' },
+    { icon: ShoppingBag, label: 'Product Search', description: 'Discover amazing products', color: 'from-green-500 to-emerald-500' },
+    { icon: TrendingUp, label: 'Price Analytics', description: 'Track price trends', color: 'from-orange-500 to-red-500' },
+  ];
+
+  const features = [
+    { icon: Star, title: 'AI-Powered', description: 'Advanced machine learning algorithms' },
+    { icon: Shield, title: 'Secure', description: 'Enterprise-grade security' },
+    { icon: TrendingUp, title: 'Analytics', description: 'Real-time insights and trends' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex overflow-hidden">
+      {/* Sidebar */}
+      <Sidebar activeItem="home" />
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Header */}
+        <Header title="Bilmo Shopping Agent" showAuthButtons={false} />
+
+        {/* Main Content Area */}
+        <main className="flex-1 overflow-y-auto">
+          <div className="flex items-center justify-center p-12 relative overflow-hidden min-h-full">
+            {/* Background Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+
+            <div className="w-full max-w-6xl text-center relative z-10">
+              {/* Main Heading */}
+              <div className="mb-12">
+                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+                  Intelligently
+                  <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Smart Search
+                  </span>
+                </h1>
+                
+                <p className="text-slate-300 text-lg font-light max-w-2xl mx-auto leading-relaxed">
+                  Enterprise-grade search platform powered by AI. Find flights, hotels, products, and more with unprecedented accuracy and speed.
+                </p>
+              </div>
+
+              {/* Search Bar */}
+              <SearchBar 
+                onSearch={handleSearch}
+                isLoading={isLoading}
+                className="mb-12"
+              />
+
+
+              {/* Quick Actions Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                {quickActions.map((action, index) => {
+                  const Icon = action.icon;
+                  return (
+                    <button
+                      key={action.label}
+                      className="group p-6 bg-gradient-to-br from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/30 rounded-2xl hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                    >
+                      <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-white font-semibold text-lg mb-2">{action.label}</h3>
+                      <p className="text-slate-400 text-sm">{action.description}</p>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Features */}
+              <div className="flex flex-wrap justify-center gap-8 mb-12">
+                {features.map((feature, index) => {
+                  const Icon = feature.icon;
+                  return (
+                    <div key={feature.title} className="flex items-center space-x-3 bg-slate-800/50 backdrop-blur-xl border border-slate-700/30 rounded-xl px-6 py-4">
+                      <Icon className="w-5 h-5 text-blue-400" />
+                      <div className="text-left">
+                        <h4 className="text-white font-semibold">{feature.title}</h4>
+                        <p className="text-slate-400 text-sm">{feature.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                  <div className="text-slate-400 text-sm">Uptime</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">50M+</div>
+                  <div className="text-slate-400 text-sm">Searches</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                  <div className="text-slate-400 text-sm">Support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
