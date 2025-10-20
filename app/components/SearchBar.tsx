@@ -12,7 +12,7 @@ interface SearchBarProps {
 
 export default function SearchBar({ 
   onSearch, 
-  placeholder = "Search for products, laptops, phones, and more...",
+  placeholder = "Ask Bilmo agent about what you want to make shopping easier...",
   className = "",
   isLoading = false
 }: SearchBarProps) {
@@ -93,30 +93,7 @@ export default function SearchBar({
         </div>
       </form>
       
-      {/* Search Suggestions */}
-      {isFocused && !isLoading && (
-        <div className="mt-4 max-w-4xl mx-auto">
-          <div className="bg-slate-800/80 backdrop-blur-xl border border-slate-600/30 rounded-2xl p-4 shadow-2xl">
-            <p className="text-slate-400 text-sm font-medium mb-3">Popular searches:</p>
-            <div className="flex flex-wrap gap-2">
-              {popularSearches.map((suggestion) => (
-                <button
-                  key={suggestion}
-                  onClick={() => {
-                    setSearchQuery(suggestion);
-                    if (onSearch) {
-                      onSearch(suggestion);
-                    }
-                  }}
-                  className="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 hover:text-white rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
-                >
-                  {suggestion}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Search suggestions removed per UX request */}
     </div>
   );
 }

@@ -127,6 +127,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = async () => {
     try {
       const { error } = await supabase.auth.signOut()
+
+      // Clear client storage (tokens cached by supabase live in localStorage)
+      try {
+        if (typeof window !== 'undefined') {
+          localStorage.clear()
+          sessionStorage.clear()
+          // Expire all cookies for current domain (handles any auth cookies if present)
+          const cookies = document.cookie.split(';')
+          for (const cookie of cookies) {
+            const eqPos = cookie.indexOf('=')
+            const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie
+            document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Lax`;
+          }
+        }
+      } catch (e) {
+        console.warn('Storage/cookie cleanup failed:', e)
+      }
+
       // Clear local state
       setUser(null)
       setSession(null)

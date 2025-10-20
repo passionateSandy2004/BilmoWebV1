@@ -2,12 +2,15 @@
 
 import { useState } from 'react';
 import { Sparkles, Send, ShoppingCart, X } from 'lucide-react';
+import { ProductPlan } from '@/app/lib/ai/types';
 
 interface ChatBoxProps {
   onSendMessage?: (message: string) => void;
+  plan?: ProductPlan | null;
+  onSearchNext?: (keywords: string[]) => void;
 }
 
-export default function ChatBox({ onSendMessage }: ChatBoxProps) {
+export default function ChatBox({ onSendMessage, plan, onSearchNext }: ChatBoxProps) {
   const [message, setMessage] = useState('');
   const [showCart, setShowCart] = useState(false);
 
@@ -96,6 +99,30 @@ export default function ChatBox({ onSendMessage }: ChatBoxProps) {
         <div className="bg-gradient-to-r from-slate-800/95 via-slate-800/95 to-slate-800/95 backdrop-blur-xl border border-slate-600/30 rounded-2xl shadow-2xl overflow-hidden">
           {/* Subtle gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 pointer-events-none"></div>
+          
+          {/* AI Recommendations Section */}
+          {plan && plan.recommendedProducts && plan.recommendedProducts.length > 0 && (
+            <div className="relative border-b border-slate-600/30 px-4 py-2.5 bg-slate-700/30">
+              <div className="flex items-center space-x-2 mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                <span className="text-slate-300 text-xs font-medium">You may also need</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {plan.recommendedProducts.slice(0, 5).map((prod, idx) => (
+                  <button
+                    key={`${prod.name}-${idx}`}
+                    onClick={() => onSearchNext?.(prod.keywords)}
+                    className="group inline-flex items-center space-x-1 px-2 py-1 bg-slate-600/50 hover:bg-slate-500/60 border border-slate-500/30 hover:border-purple-500/50 rounded-lg text-slate-200 text-[11px] font-medium transition-all"
+                  >
+                    <span>{prod.name}</span>
+                    <svg className="w-2.5 h-2.5 text-slate-400 group-hover:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           
           <div className="relative px-4 py-3">
             <div className="flex items-center space-x-3">

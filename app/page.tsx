@@ -14,6 +14,13 @@ export default function Home() {
   const handleSearch = (query: string) => {
     if (!query.trim()) return;
     
+    // If not signed in, open auth modal and block navigation
+    if (!user) {
+      const signInBtn = document.querySelector('[data-signin]') as HTMLButtonElement;
+      if (signInBtn) signInBtn.click();
+      return;
+    }
+    
     // Navigate to search page with the query
     window.location.href = `/search?q=${encodeURIComponent(query)}`;
   };

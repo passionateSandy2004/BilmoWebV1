@@ -11,7 +11,7 @@ export default function Sidebar({ activeItem = 'home' }: SidebarProps) {
   const { user, signOut } = useAuth();
   
   const navigationItems = [
-    { id: 'home', label: 'Dashboard', icon: Home, badge: null },
+    { id: 'home', label: 'Chat', icon: Home, badge: null },
     { id: 'deals', label: 'Top Deals', icon: DollarSign, badge: '12' },
     { id: 'featured', label: 'Featured', icon: Star, badge: null },
     { id: 'alerts', label: 'Price Alerts', icon: Bell, badge: '3' },
@@ -68,46 +68,61 @@ export default function Sidebar({ activeItem = 'home' }: SidebarProps) {
       </nav>
 
       {/* User Profile Section */}
-      <div className="p-6 border-t border-slate-700/30">
+      <div className="p-4 border-t border-slate-700/30 bg-slate-900/50">
         {user ? (
-          <div className="flex items-center space-x-3 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-all duration-200 cursor-pointer group">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white font-semibold text-sm">
-              {user.user_metadata?.full_name 
-                ? user.user_metadata.full_name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
-                : user.email?.charAt(0).toUpperCase() || 'U'
-              }
-            </div>
-            <div className="flex-1">
-              <p className="text-white font-medium text-sm">
-                {user.user_metadata?.full_name || user.email?.split('@')[0] || 'User'}
-              </p>
-              <p className="text-slate-400 text-xs">{user.email}</p>
-            </div>
-            <div className="flex space-x-1">
-              <button 
-                onClick={() => window.location.href = '/profile'}
-                className="p-2 text-slate-400 hover:text-white hover:bg-slate-600/50 rounded-lg transition-colors"
-              >
-                <Settings className="w-4 h-4" />
-              </button>
-              <button 
-                onClick={async () => {
-                  await signOut();
-                  window.location.reload();
-                }}
-                className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
-              >
-                <LogOut className="w-4 h-4" />
-              </button>
+          <div className="relative group">
+            {/* Subtle gradient backdrop */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            
+            <div className="relative flex items-center space-x-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/40 group-hover:border-slate-600/50 transition-all duration-200">
+              {/* Avatar with online indicator */}
+              <div className="relative flex-shrink-0">
+                <div className="w-11 h-11 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                  {user.user_metadata?.full_name 
+                    ? user.user_metadata.full_name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
+                    : user.email?.charAt(0).toUpperCase() || 'U'
+                  }
+                </div>
+                <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 border-2 border-slate-900 rounded-full"></div>
+              </div>
+
+              {/* User info */}
+              <div className="flex-1 min-w-0">
+                <p className="text-white font-semibold text-sm truncate">
+                  {user.user_metadata?.full_name || user.email?.split('@')[0] || 'User'}
+                </p>
+                <p className="text-slate-400 text-xs truncate">{user.email}</p>
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex items-center space-x-1 flex-shrink-0">
+                <button 
+                  onClick={() => window.location.href = '/profile'}
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-700/60 rounded-lg transition-all"
+                  title="Settings"
+                >
+                  <Settings className="w-4 h-4" />
+                </button>
+                <button 
+                  onClick={async () => {
+                    await signOut();
+                    window.location.reload();
+                  }}
+                  className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-all"
+                  title="Sign out"
+                >
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           </div>
         ) : (
-          <div className="text-center p-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <div className="text-center p-4 rounded-xl bg-slate-800/30 border border-slate-700/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center mx-auto mb-3 border border-slate-600/30">
               <User className="w-6 h-6 text-slate-400" />
             </div>
-            <p className="text-slate-400 text-sm mb-2">Not signed in</p>
-            <p className="text-slate-500 text-xs">Sign in to access your profile</p>
+            <p className="text-slate-300 text-sm font-medium mb-1">Not signed in</p>
+            <p className="text-slate-500 text-xs">Sign in to unlock features</p>
           </div>
         )}
       </div>

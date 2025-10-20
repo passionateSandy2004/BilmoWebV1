@@ -6,6 +6,8 @@ import Header from '../components/Header';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import ChatBox from '../components/ChatBox';
 import ChatSearchInterface, { ChatSearchInterfaceHandle } from '../components/ChatSearchInterface';
+import RecommendationBanner from '../components/RecommendationBanner';
+import { ProductPlan } from '../lib/ai/types';
 import { useAuth } from '../contexts/AuthContext';
 import { searchProducts } from '../lib/searchApi';
 
@@ -65,6 +67,7 @@ function SearchPageContent() {
   const [googleDeals, setGoogleDeals] = useState<GoogleDeal[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [plan, setPlan] = useState<ProductPlan | null>(null);
 
   useEffect(() => {
     const query = searchParams.get('q');
@@ -82,7 +85,20 @@ function SearchPageContent() {
     setSearchQuery(query);
 
     try {
-      const results = await searchProducts(query);
+      // Use AI planner for the very first search as well
+      const resp = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: query })
+      });
+      if (!resp.ok) {
+        throw new Error('Chat planning failed');
+      }
+      const json = await resp.json();
+      const aiPlan: ProductPlan | undefined = json.plan;
+      setPlan(aiPlan || null);
+
+      const results = (json.data || []) as Product[];
       
       // Filter results based on price availability
       // Products without prices go to Top Deals (Google organic results)
@@ -136,7 +152,20 @@ function SearchPageContent() {
       return { googleDeals: [], searchResults: [] };
     }
 
-    const results = await searchProducts(message);
+    // Call new chat API to plan and search primary product
+    const resp = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+    if (!resp.ok) {
+      throw new Error('Chat planning failed');
+    }
+    const json = await resp.json();
+    const aiPlan: ProductPlan | undefined = json.plan;
+    setPlan(aiPlan || null);
+
+    const results = (json.data || []) as Product[];
     
     // Filter results based on price availability
     // Products without prices go to Top Deals (Google organic results)
@@ -215,6 +244,7 @@ function SearchPageContent() {
                 initialGoogleDeals={googleDeals}
                 initialSearchResults={searchResults}
                 onNewSearch={handleChatMessage}
+                plan={plan}
               />
             </ErrorBoundary>
           </div>
@@ -222,11 +252,20 @@ function SearchPageContent() {
       </main>
 
       {/* Chat Box - Sticky at bottom */}
-      <ChatBox onSendMessage={async (message) => {
-        if (chatSearchRef.current) {
-          await chatSearchRef.current.triggerNewSearch(message);
-        }
-      }} />
+      <ChatBox 
+        onSendMessage={async (message) => {
+          if (chatSearchRef.current) {
+            await chatSearchRef.current.triggerNewSearch(message);
+          }
+        }}
+        plan={plan}
+        onSearchNext={async (keywords) => {
+          const q = keywords.join(' ');
+          if (chatSearchRef.current) {
+            await chatSearchRef.current.triggerNewSearch(q);
+          }
+        }}
+      />
     </div>
   );
 }

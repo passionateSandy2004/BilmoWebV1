@@ -24,6 +24,7 @@ export async function searchProducts(query: string): Promise<Product[]> {
   try {
     // Convert spaces to dashes and make lowercase
     const formattedQuery = query.toLowerCase().replace(/\s+/g, '-');
+    const rawQuery = query.trim();
     
     console.log('🔍 Searching for:', formattedQuery);
     
@@ -74,6 +75,26 @@ export async function searchProducts(query: string): Promise<Product[]> {
       console.log('❌ Flipkart search failed:', flipkartResults.status === 'rejected' ? flipkartResults.reason : 'API error');
     }
 
+    // If Flipkart yielded nothing, try again with the raw query as a fallback
+    const hasFlipkart = allResults.some(r => r.source === 'Flipkart' || r.source === 'Flipkart (Fallback)');
+    if (!hasFlipkart) {
+      try {
+        const flipkartFallback = await fetch(`https://scraper-mauve.vercel.app/search/flipkart?product=${encodeURIComponent(rawQuery)}`, {
+          method: 'GET',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          mode: 'cors',
+        });
+        if (flipkartFallback.ok) {
+          const flipkartData: SearchResponse = await flipkartFallback.json();
+          if (flipkartData.results && flipkartData.results.length > 0) {
+            allResults.push(...flipkartData.results.map(product => ({ ...product, source: 'Flipkart' })));
+          }
+        }
+      } catch (e) {
+        console.log('Flipkart fallback failed:', e);
+      }
+    }
+
     // Process Amazon results
     if (amazonResults.status === 'fulfilled' && amazonResults.value.ok) {
       try {
@@ -94,6 +115,26 @@ export async function searchProducts(query: string): Promise<Product[]> {
       if (amazonResults.status === 'fulfilled') {
         console.log('🔍 Amazon response status:', amazonResults.value.status);
         console.log('🔍 Amazon response text:', await amazonResults.value.text());
+      }
+    }
+
+    // If Amazon yielded nothing, try again with the raw query as a fallback
+    const hasAmazon = allResults.some(r => r.source === 'Amazon');
+    if (!hasAmazon) {
+      try {
+        const amazonFallback = await fetch(`https://scraper-mauve.vercel.app/search/amazon?product=${encodeURIComponent(rawQuery)}`, {
+          method: 'GET',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          mode: 'cors',
+        });
+        if (amazonFallback.ok) {
+          const amazonData: SearchResponse = await amazonFallback.json();
+          if (amazonData.results && amazonData.results.length > 0) {
+            allResults.push(...amazonData.results.map(product => ({ ...product, source: 'Amazon' })));
+          }
+        }
+      } catch (e) {
+        console.log('Amazon fallback failed:', e);
       }
     }
 
@@ -183,9 +224,25 @@ export async function searchProducts(query: string): Promise<Product[]> {
       }
     }
 
+    // Deduplicate by link
+    const uniqueByLink = (items: Product[]) => {
+      const seen = new Set<string>();
+      const out: Product[] = [];
+      for (const item of items) {
+        const key = item.link;
+        if (key && !seen.has(key)) {
+          seen.add(key);
+          out.push(item);
+        }
+      }
+      return out;
+    };
+
+    const dedupedResults = uniqueByLink(allResults);
+
     // Mix results from different platforms for better user experience
-    const googleOrganic = allResults.filter(r => r.source !== 'Flipkart' && r.source !== 'Flipkart (Fallback)' && r.source !== 'Amazon');
-    const platformResults = allResults.filter(r => r.source === 'Flipkart' || r.source === 'Flipkart (Fallback)' || r.source === 'Amazon');
+    const googleOrganic = dedupedResults.filter(r => r.source !== 'Flipkart' && r.source !== 'Flipkart (Fallback)' && r.source !== 'Amazon');
+    const platformResults = dedupedResults.filter(r => r.source === 'Flipkart' || r.source === 'Flipkart (Fallback)' || r.source === 'Amazon');
     
     // Sort platform results by price (high to low) while mixing platforms
     const sortedPlatformResults = platformResults.sort((a, b) => {

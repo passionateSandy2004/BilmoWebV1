@@ -3,6 +3,7 @@
 import { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import SearchResults from './SearchResults';
 import TopDeals from './TopDeals';
+import { ProductPlan } from '@/app/lib/ai/types';
 
 // Agentic AI Loading Component with Futuristic Animation
 function AgenticLoadingSteps() {
@@ -263,6 +264,7 @@ interface ChatSearchInterfaceProps {
   initialGoogleDeals?: Product[];
   initialSearchResults?: Product[];
   onNewSearch: (query: string) => Promise<{ googleDeals: Product[], searchResults: Product[] }>;
+  plan?: ProductPlan | null;
 }
 
 export interface ChatSearchInterfaceHandle {
@@ -273,7 +275,8 @@ const ChatSearchInterface = forwardRef<ChatSearchInterfaceHandle, ChatSearchInte
   initialQuery, 
   initialGoogleDeals = [], 
   initialSearchResults = [],
-  onNewSearch 
+  onNewSearch,
+  plan
 }, ref) => {
   const [searchSessions, setSearchSessions] = useState<SearchSession[]>([]);
   const [initialSessionCreated, setInitialSessionCreated] = useState(false);
@@ -391,7 +394,9 @@ const ChatSearchInterface = forwardRef<ChatSearchInterfaceHandle, ChatSearchInte
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">Top Deals</h3>
-                         <p className="text-slate-400 text-xs">for &quot;{session.query}&quot;</p>
+                         <p className="text-slate-400 text-xs">
+                           {(index === searchSessions.length - 1 && plan?.primaryProduct?.name) ? plan.primaryProduct.name : session.query}
+                         </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2 mt-3">
@@ -534,6 +539,11 @@ const ChatSearchInterface = forwardRef<ChatSearchInterfaceHandle, ChatSearchInte
 
             {/* Main Search Results - Professional Grid */}
             <div className="flex-1 min-w-0">
+              {(index === searchSessions.length - 1 && plan?.answerIntro) && (
+                <div className="mb-4 p-4 bg-slate-800/30 border border-slate-700/50 rounded-xl">
+                  <p className="text-slate-200 text-sm">{plan.answerIntro}</p>
+                </div>
+              )}
               <SearchResults
                 results={session.searchResults}
                 isLoading={session.isLoading}
