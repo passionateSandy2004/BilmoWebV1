@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Mic, Paperclip, Filter, Sparkles } from 'lucide-react';
+import { Search, Send, Sparkles } from 'lucide-react';
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
@@ -26,16 +26,10 @@ export default function SearchBar({
     }
   };
 
-  const handleVoiceSearch = () => {
-    console.log('Voice search activated');
-  };
-
-  const handleAttachment = () => {
-    console.log('Attachment clicked');
-  };
-
-  const handleFilter = () => {
-    console.log('Filter clicked');
+  const handleSend = () => {
+    if (onSearch && searchQuery.trim()) {
+      onSearch(searchQuery.trim());
+    }
   };
 
   const popularSearches = [
@@ -58,6 +52,12 @@ export default function SearchBar({
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
               placeholder={placeholder}
               disabled={isLoading}
               className={`w-full pl-16 pr-32 py-6 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border-2 rounded-2xl text-white placeholder-slate-400 focus:outline-none transition-all duration-300 text-xl font-medium shadow-2xl ${
@@ -67,36 +67,20 @@ export default function SearchBar({
               } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
             />
             
-            {/* Action Buttons */}
-            <div className="absolute inset-y-0 right-0 pr-6 flex items-center space-x-3">
-              <button
-                type="button"
-                onClick={handleFilter}
-                disabled={isLoading}
-                className="p-3 text-slate-400 hover:text-white hover:bg-slate-600/50 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                title="Advanced filters"
-              >
-                <Filter className="h-5 w-5" />
-              </button>
-              <button
-                type="button"
-                onClick={handleAttachment}
-                disabled={isLoading}
-                className="p-3 text-slate-400 hover:text-white hover:bg-slate-600/50 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                title="Attach file"
-              >
-                <Paperclip className="h-5 w-5" />
-              </button>
-              <button
-                type="button"
-                onClick={handleVoiceSearch}
-                disabled={isLoading}
-                className="p-3 text-slate-400 hover:text-white hover:bg-slate-600/50 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                title="Voice search"
-              >
-                <Mic className="h-5 w-5" />
-              </button>
-            </div>
+            {/* Send Button - Only show when there's text */}
+            {searchQuery.trim() && (
+              <div className="absolute inset-y-0 right-0 pr-6 flex items-center">
+                <button
+                  type="button"
+                  onClick={handleSend}
+                  disabled={isLoading}
+                  className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-blue-500/25"
+                  title="Send search"
+                >
+                  <Send className="h-5 w-5" />
+                </button>
+              </div>
+            )}
           </div>
           
           {/* AI Enhancement Badge */}
