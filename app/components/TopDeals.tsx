@@ -99,7 +99,7 @@ export default function TopDeals({ query, googleDeals, isLoading }: TopDealsProp
           </div>
         ) : googleDeals.length > 0 ? (
           <div className="space-y-4">
-            {googleDeals.slice(0, 6).map((deal, index) => (
+            {googleDeals.map((deal, index) => (
               <div
                 key={index}
                 className={`bg-slate-700/30 hover:bg-slate-700/50 rounded-xl p-4 cursor-pointer transition-all duration-200 border ${

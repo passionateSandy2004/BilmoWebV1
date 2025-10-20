@@ -405,7 +405,7 @@ const ChatSearchInterface = forwardRef<ChatSearchInterfaceHandle, ChatSearchInte
                          <AgenticLoadingSteps />
                        ) : session.googleDeals.length > 0 ? (
                     <div className="space-y-4">
-                      {session.googleDeals.slice(0, 6).map((deal, idx) => (
+                      {session.googleDeals.map((deal, idx) => (
                         <a
                           key={idx}
                           href={deal.link}
